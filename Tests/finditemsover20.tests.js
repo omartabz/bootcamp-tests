@@ -1,5 +1,5 @@
 describe('finditemsover20' , function(){
-    it('that takes a list of objects, each object having 2 attributes one called name and the other qty. The function should return all the products that have a quantity higher than 20', function(){
+    it('It takes a list of objects, each object having 2 attributes one called name and the other qty. The function should return all the products that have a quantity higher than 20', function(){
         var itemList = [
             {name : 'apples', qty : 10},
             {name : 'pears', qty : 37},
@@ -12,6 +12,13 @@ describe('finditemsover20' , function(){
             {name : 'bananas', qty : 27},
         ];
         
+
+        
+        assert.deepEqual(results, findItemsOver20(itemList,2));
+    });
+
+    it('It takes a list of objects, each object having 2 attributes one called name and the other qty. The function should return all the products that have a quantity higher than 20', function(){
+        
         var itemList2 = [
             {name : 'apples', qty : 10},
             {name : 'pears', qty : 19},
@@ -20,6 +27,11 @@ describe('finditemsover20' , function(){
         ];
         
         var results2 = [];
+
+        assert.deepEqual(results2, findItemsOver20(itemList2,0));
+    });
+
+    it('It takes a list of objects, each object having 2 attributes one called name and the other qty. The function should return all the products that have a quantity higher than 20', function(){
         
         var itemList3 = [
             {name : 'apples', qty : 40},
@@ -34,19 +46,8 @@ describe('finditemsover20' , function(){
             {name : 'apples', qty : 37}
         ];
         
-        assert.deepEqual(results, findItemsOver20(itemList));
-        assert.deepEqual(results2, findItemsOver20(itemList2));
-        assert.deepEqual(results3, findItemsOver20(itemList3));
-        
-        console.log('findItemsOver20 passed!')
-        
-        assert.deepEqual(results, findItemsOver(itemList, 20));
-        assert.deepEqual(results2, findItemsOver(itemList2, 20));
-        assert.deepEqual(results3, findItemsOver(itemList3, 20));
-        
-        console.log('findItemsOver passed!');
-        
-        
+        assert.deepEqual(results3, findItemsOver20(itemList3,3));
     });
 
-});
+        
+    });

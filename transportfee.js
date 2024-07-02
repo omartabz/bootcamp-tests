@@ -1,12 +1,11 @@
-function transportFee(shift){
-    switch (shift) {
-      case 'morning':
-        return  'R20';
-      case 'afternoon':
-        return  'R10';
-      case 'nightshift':
-        return 'free';
-      default:
-        return 'Invalid shift';
-                 }
-  }
+function Omar(transport){
+if (transport < 'R80'){
+  return 'taxi';
+}else if (transport >= 'R100'){
+  return 'use uber';
+}else if (transport >'R8000'){
+    return 'use uber black';
+}else {
+return 'walk';
+}
+}  

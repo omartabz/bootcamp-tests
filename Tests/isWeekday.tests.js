@@ -1,8 +1,13 @@
 describe('isWeekday' , function(){
-    it('if the parameter passed in is a day of the week' , function(){
+    it('return false if it is not a day of the week' , function(){
         assert.equal(isWeekday('Saturday'), false);
-
-        assert.deepEqual(isWeekday('Monday'), true);
     });
 
+    it('return true if it is a day of the week', function(){
+        assert.equal(isWeekday('Monday'), true);
+
+    });
+    it('return false if it is not a day of the week',function(){
+        assert.equal(isWeekday('Sunday'), false);
+    });
 });
